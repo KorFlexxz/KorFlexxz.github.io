@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>ТРЕНАЖЕРНЫЙ ЗАЛ</title>
+{% endblock %}
+
+{% block body %}
+
+<main class="container">
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://yt3.ggpht.com/a/AATXAJwCTBmZXh9R4hYW4VLErwZPxerYCspzaHgbgNgf=s900-c-k-c0xffffffff-no-rj-mo" alt="" width="92" height="77">
+    <h1 class="display-5 fw-bold">Тренажерный зал</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Самый лучший тренажерный зал на территории СНГ</p>
+
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for el in data %}
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">{{el.title}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{el.des}}<small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+        </ul>
+        <a href="{{el.link}}" class="w-100 btn btn-lg btn-secondary">Связаться </a>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+
+  </div>
+  </main>
+{% endblock %}

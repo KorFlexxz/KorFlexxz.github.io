@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Запись в зал</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<h1>Записаться в наш зал</h1>
+    <form method="post">
+        <input  type="text" class="form-control" name="title" id="title" placeholder="Введите ваше имя и фамилию"><br>
+        <input  type="text" class="form-control" name="link" id="link" placeholder="Введите ссылку на вашу страничку в любой соцсети"><br>
+        <input  type="text" class="form-control" name="des" id="des" placeholder="Введите вашу цель тренировок"><br>
+        <button class="btn btn-secondary" type="submit"> Записаться</button>
+    </form>
+</div>
+{% endblock %}
